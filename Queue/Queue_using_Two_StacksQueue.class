@@ -1,0 +1,47 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+package Queue;
+
+import java.util.Stack;
+
+class Queue_using_Two_Stacks$Queue {
+   static Stack<Integer> s1 = new Stack();
+   static Stack<Integer> s2 = new Stack();
+
+   Queue_using_Two_Stacks$Queue() {
+   }
+
+   public static boolean isEmpty() {
+      return s1.isEmpty();
+   }
+
+   public static void add(int var0) {
+      while(!s1.isEmpty()) {
+         s2.push((Integer)s1.pop());
+      }
+
+      s1.push(var0);
+
+      while(!s2.isEmpty()) {
+         s1.push((Integer)s2.pop());
+      }
+
+   }
+
+   public static int remove() {
+      if (isEmpty()) {
+         System.out.println("queue empty");
+         return -1;
+      } else {
+         return (Integer)s1.pop();
+      }
+   }
+
+   public static int peek() {
+      if (isEmpty()) {
+         System.out.println("queue empty");
+         return -1;
+      } else {
+         return (Integer)s1.peek();
+      }
+   }
+}
