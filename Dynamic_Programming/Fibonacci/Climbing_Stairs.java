@@ -44,6 +44,22 @@ public class Climbing_Stairs {
         return ways[n];
     }
 
+    //for tabulation
+    //Time complexity:-o(n)
+    public static int countwaysTab(int n){
+        int dp[] = new int[n+1];
+        dp[0] = 1;
+        //tabulation loop 
+        for(int i=1; i<=n; i++){
+            if(i == 1){
+                dp[i] = dp[i-1] + 0;
+            }else{
+                dp[i] = dp[i-1] + dp[i-2];
+            }
+        }
+        return dp[n];
+    }
+
     public static void main(String[] args) {
 <<<<<<< HEAD
         int n = 5; // n=3 -> 3 & n=4 -> 5 => 8
@@ -56,9 +72,13 @@ public class Climbing_Stairs {
 
         System.out.println(countways(n, ways));
 <<<<<<< HEAD
+<<<<<<< HEAD
         System.out.println(countwaysTab(n));
 =======
 >>>>>>> 6562fde (Optimize Climbing Stairs implementation using memoization)
+=======
+        System.out.println(countwaysTab(n));
+>>>>>>> e3f0af7 (Add tabulation method for counting ways in Climbing Stairs problem)
 
     }
 
