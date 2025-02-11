@@ -17,7 +17,7 @@ public class Climbing_Stairs {
     }
 
     public static void main(String[] args) {
-        int n = 5; // n=3 -> 3 & n=4 -> 5 => 8
+        int n = 5; // n=3 -> 3 & n=4 -> 5 =>8
         int ways[] = new int[n + 1]; // memonization
         Arrays.fill(ways, -1);
 
