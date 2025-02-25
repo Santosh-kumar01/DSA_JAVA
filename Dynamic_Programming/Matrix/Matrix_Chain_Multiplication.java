@@ -19,7 +19,7 @@ public class Matrix_Chain_Multiplication {
     }
 
     public static void main(String[] args) {
-        int arr[] = {1,2,3,4,3};
+        int arr[] = {1,2,3,4,5,4};
         int n = arr.length;
         System.out.println(mcm(arr, 1, n-1));
     }
