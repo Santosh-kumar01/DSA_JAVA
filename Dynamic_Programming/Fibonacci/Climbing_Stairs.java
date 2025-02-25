@@ -8,6 +8,7 @@ public class Climbing_Stairs {
         if (n < 0) {
             return 0;
         }
+<<<<<<< HEAD
 
         if (ways[n] != -1) { // already calculated
             return ways[n];
@@ -34,11 +35,26 @@ public class Climbing_Stairs {
 
     public static void main(String[] args) {
         int n = 5; // n=3 -> 3 & n=4 -> 5 =>8
+=======
+
+        if (ways[n] != -1) { // already calculated
+            return ways[n];
+        }
+        ways[n] = countways(n - 1, ways) + countways(n - 2, ways);
+        return ways[n];
+    }
+
+    public static void main(String[] args) {
+        int n = 5; // n=3 -> 3 & n=4 -> 5 => 8
+>>>>>>> 6562fde (Optimize Climbing Stairs implementation using memoization)
         int ways[] = new int[n + 1]; // memonization
         Arrays.fill(ways, -1);
 
         System.out.println(countways(n, ways));
+<<<<<<< HEAD
         System.out.println(countwaysTab(n));
+=======
+>>>>>>> 6562fde (Optimize Climbing Stairs implementation using memoization)
 
     }
 
