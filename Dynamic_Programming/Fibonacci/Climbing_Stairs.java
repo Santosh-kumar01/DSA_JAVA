@@ -45,8 +45,12 @@ public class Climbing_Stairs {
     }
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         int n = 5; // n=3 -> 3 & n=4 -> 5 => 8
 >>>>>>> 6562fde (Optimize Climbing Stairs implementation using memoization)
+=======
+        int n = 5; // n=3 -> 3 & n=4 -> 5 =>8
+>>>>>>> 3537079 (Fix formatting in Climbing Stairs main method comment)
         int ways[] = new int[n + 1]; // memonization
         Arrays.fill(ways, -1);
 
